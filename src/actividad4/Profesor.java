@@ -1,15 +1,12 @@
 package actividad4;
 
-import java.util.Random;
-
-public class Profesor {
-	
+public class Profesor 
+{
 	public void ponerNotas(Alumno alumno)
 	{
-		Random aleatorio = new Random();
-		alumno.getAsig1().setCalificacion(aleatorio.nextInt(0, 10));
-		alumno.getAsig2().setCalificacion(aleatorio.nextInt(0, 10));
-		alumno.getAsig3().setCalificacion(aleatorio.nextInt(0, 10));
+		alumno.getAsig1().setCalificacion(Math.random()*10);
+		alumno.getAsig2().setCalificacion(Math.random()*10);
+		alumno.getAsig3().setCalificacion(Math.random()*10);
 	}
 	
 	public double calcularMedia(Alumno alumno)
@@ -18,5 +15,4 @@ public class Profesor {
 		
 		return suma / 3;
 	}
-
 }
